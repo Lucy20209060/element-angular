@@ -43,7 +43,7 @@ export class ElSelectDropdown implements OnInit {
   }
   
   ngOnInit(): void {
-    let firstStyle: string = 'display: none; opacity: 0; height: 0;'
+    let firstStyle: string = 'display: none; opacity: 0; height: 0; overflow: hidden;'
     this.dropdownStyles = this.sanitizer.bypassSecurityTrustStyle(firstStyle)
     setTimeout(() => {
       const styles = `min-width: ${this.rootSelect.selfWidth}px; ${firstStyle || ''}`
